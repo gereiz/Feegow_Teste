@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "App\Http\Controllers\AgendamentoController@index");
+Route::post('/clinica/agendamento', "App\Http\Controllers\AgendamentoController@store");
+Route::get('/clinica/profissionais/{id}', "App\Http\Controllers\AgendamentoController@getProfissionais");
+Route::get('/clinica/origens', "App\Http\Controllers\AgendamentoController@getOrigens");
+
