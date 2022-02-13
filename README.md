@@ -1,5 +1,4 @@
 # Teste para desenvolvedor PHP pleno Feegow
-projeto feito para o teste da feegow
 
 
 # Funcionamento
