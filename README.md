@@ -1,64 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Teste para desenvolvedor PHP pleno Feegow
+projeto feito para o teste da feegow
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Vídeo do código em funcionamento:
+https://user-images.githubusercontent.com/49003468/153772095-4871d95d-7801-411c-9565-333c6c8355c5.mp4
 
-## About Laravel
+# Funcionamento
+Na tela inicial, o cliente pesquisa a especialidade desejada na lista:
+![Tela inicial](https://user-images.githubusercontent.com/49003468/153772066-1faa121d-be1a-490b-ac8b-f0bb06a592c5.jpg)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+apos escolher uma especialidade e clicar em agendar é apresentada a lista de todos os profissionais daquela especialidade, exibindo uma imagem genérica para os profissionais que não tem foto cadastrada e a foto do profissional quando cadastrada.
+![pesquisa](https://user-images.githubusercontent.com/49003468/153772067-79ba4551-424d-4013-9b0c-dbc1fca8c54a.jpg)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ao clicar em agendar será solicitado ao cliente a inclusão de seus dados pessoais
+![Agendamento](https://user-images.githubusercontent.com/49003468/153772070-c0b753be-81e9-4a56-b0f8-5d1c739b9406.jpg)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Os campos Nome, Nascimento e CPF são inseridos pelo cliente e o campo Como conheceu, é alimentado pela API como solicitado.
+![dados](https://user-images.githubusercontent.com/49003468/153772075-537f9b8a-6615-4abc-a4b1-76dedc38e209.jpg)
 
-## Learning Laravel
+Ao concluir o agnedamento, será exibida uma mensagem de confirmação
+![agendamento realizado](https://user-images.githubusercontent.com/49003468/153772076-b0ab71d8-f192-40c3-b2e9-6aab9aa59bb8.jpg)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+O registro é salvo no banco de dados ao fim do agendamento
+![banco de dados](https://user-images.githubusercontent.com/49003468/153772063-cf932d7f-9911-45ec-b76a-432cc2856bf9.jpg)
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# Para rodar o código, será necessário ter instalado:
 
-### Premium Partners
+- php 7.4+
+- mysql
+- composer
+- laravel 8.0+
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+1- Digite o commando "composer install". Ele vai instalar todos os pacotes php necessários.
 
-## Contributing
+2- Digite o commando "php artisan key:generate". Esse vai gerar uma chave para a aplicação.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- No MySql crie um database chamado "agenda_feegow".
+- Renomeie o arquvivo .env.example para .env e preencha os seus dados de conexão com o seu banco. (é importante que seja ete arquivo, pois o token para acesso a API está inserida nele como variável de ambiente).
+- Execute o camndo php artisan migrate.
+- Por fim execute o comando php artisan serve para iniciar o servidor.
 
-## Code of Conduct
+accesse em 127.0.0.1:800
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+:)
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
