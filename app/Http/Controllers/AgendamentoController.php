@@ -34,10 +34,10 @@ class AgendamentoController extends Controller
 
         try {
             $agenda->save();
-            return ['code'=> 0 , 'msg'=>'Seus dados foram salvos com sucesso!', 'obj'=>$agenda];
+            return ['code'=> 0 , 'msg'=>'Agendamento realizado!', 'obj'=>$agenda];
 
         } catch (\Exception $e) {
-            return ['code'=> 1 , 'msg'=>'houve um erro ao salvar seus dados!\n'.$e, 'obj'=>$agenda];
+            return ['code'=> 1 , 'msg'=>'Erro ao realizar o agendamento!\n'.$e, 'obj'=>$agenda];
         }
         
     }
