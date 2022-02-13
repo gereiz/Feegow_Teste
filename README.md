@@ -1,8 +1,6 @@
 # Teste para desenvolvedor PHP pleno Feegow
 projeto feito para o teste da feegow
 
-# Vídeo do código em funcionamento:
-https://user-images.githubusercontent.com/49003468/153772095-4871d95d-7801-411c-9565-333c6c8355c5.mp4
 
 # Funcionamento
 Na tela inicial, o cliente pesquisa a especialidade desejada na lista:
